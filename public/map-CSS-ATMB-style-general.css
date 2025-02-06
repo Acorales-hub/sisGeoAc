@@ -1,0 +1,13 @@
+/* **************************************************************
+*    ACADEMIA TÉCNICA MILITAR BOLIVARIANA                       *
+*    DE COMUNICACIONES Y ELÉCTRONICA.                           *
+*    PROYECTO DE PROGRAMACIÓN.                                  *
+*    ALFÉREZ: D. NAVARRO C.                                     *
+*    FECHA: 22/04/2022                                          *
+*    DESCRIPCIÓN: ESTILOS EN CASCADA GENERALES PARA LA APP WEB  *
+*************************************************************** */
+
+body{
+    background-color: #385380;
+    color: aliceblue;
+}

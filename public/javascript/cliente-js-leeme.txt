@@ -1,0 +1,2 @@
+En esta carpeta estaán todos los archivos JavaScript
+que corren del lado del cliente.

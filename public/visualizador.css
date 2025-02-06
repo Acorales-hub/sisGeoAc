@@ -1,0 +1,27 @@
+/* Estilos generales con tema militar */
+body {
+    background-color: #333; /* Gris oscuro */
+    color: #eee; /* Gris claro para el texto */
+    font-family: 'Courier New', monospace;
+}
+
+#sidebar {
+    background-color: #444; /* Gris más oscuro para el sidebar */
+}
+
+/* Estilos para el mapa */
+#map {
+    height: 400px;
+    width: 100%;
+}
+/* Otros estilos para botones, acordeón, etc. */
+
+.accordion-button{
+    background-color: #555 !important;
+    color: #eee !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #666 !important;
+    color: #eee !important;
+}

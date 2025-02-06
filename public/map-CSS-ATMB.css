@@ -1,0 +1,14 @@
+/* **************************************************************
+*    ACADEMIA TÉCNICA MILITAR BOLIVARIANA                       *
+*    DE COMUNICACIONES Y ELÉCTRONICA.                           *
+*    PROYECTO DE PROGRAMACIÓN.                                  *
+*    ALFÉREZ: D. NAVARRO C.                                     *
+*    FECHA: 22/04/2022                                          *
+*    DESCRIPCIÓN: ESTILOS EN CASCADA PARA LA APP WEB            *
+*************************************************************** */
+
+/*ÍNDICE DE IMPORTACIONES DE ARCHIVOS EXTERNOS:*/
+    @import url('map-CSS-ATMB-style-general.css'); /*<01: GENERALES*/
+    @import url('map-CSS-ATMB-style-index.css');   /*<02: INDEX*/
+    @import url('map-CSS-ATMB-style-map.css');     /*<03: MAPA*/
+    @import url('map-CSS-ATMB-style-menu.css');    /*<04: MENÚ EN EL PÍE DE PÁGINA*/
