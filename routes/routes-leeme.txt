@@ -1,0 +1,40 @@
+                La carpeta `routes` 
+
+Se utiliza en aplicaciones web para gestionar la 
+definición y organización de las rutas (URLs) del 
+proyecto. Aquí hay algunas funciones y características
+ clave de esta carpeta:
+
+1. **Definición de Rutas**: Contiene archivos que 
+especifican las rutas de la aplicación, indicando qué 
+URLs corresponden a qué funcionalidades o controladores. 
+Esto es esencial para dirigir las solicitudes del usuario
+ a las partes adecuadas de la aplicación.
+
+2. **Organización del Código**: Facilita la organización
+ del código relacionado con la gestión de rutas. Tener 
+ una carpeta específica para esto ayuda a mantener el 
+ código limpio y estructurado.
+
+3. **Manejo de Métodos HTTP**: Permite definir la forma
+ en que se manejan diferentes métodos 
+ HTTP (GET, POST, PUT, DELETE, etc.) para cada ruta, 
+ lo cual es fundamental para el funcionamiento de una API 
+ o aplicación web.
+
+4. **Middleware**: Puede incluir la configuración de
+ middleware asociado a las rutas, como autenticación, 
+ validación o transformación de datos, que se aplica a 
+ ciertas rutas o grupos de rutas.
+
+5. **Desacoplamiento**: Al tener las rutas organizadas
+ en una carpeta específica, se desacopla la lógica de 
+ enrutamiento del resto de la aplicación, lo que mejora 
+ la mantenibilidad y facilita la colaboración entre 
+ desarrolladores.
+
+En resumen, la carpeta `routes` es esencial para la 
+gestión y organización eficiente de las rutas de la 
+aplicación. 
+
+                            .::CORALESoftware::.
