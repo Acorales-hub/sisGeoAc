@@ -1,0 +1,39 @@
+                    La carpeta `views`
+
+ se utiliza en aplicaciones web, especialmente en aquellas 
+ que siguen el patrón Modelo-Vista-Controlador (MVC), para 
+ almacenar las plantillas o componentes de la interfaz de
+  usuario. Aquí te dejo las funciones y características 
+  principales de esta carpeta:
+
+1. **Interfaz de Usuario**: Contiene archivos que definen 
+la estructura visual y el diseño de las páginas web que ven 
+los usuarios, como HTML, plantillas de motor de vistas 
+(por ejemplo, Pug, EJS) o componentes de frontend
+ (por ejemplo, JSX en React).
+
+2. **Separación de la Lógica**: Permite separar la lógica de
+ presentación del resto de la aplicación (modelo y controlador), 
+ lo que ayuda a mantener el código más limpio y manejable.
+
+3. **Plantillas Dinámicas**: Las vistas pueden usar plantillas
+ para inyectar datos dinámicos provenientes de los modelos, lo 
+ que permite generar contenido en función de la información que 
+ se proporciona.
+
+4. **Componentes Reutilizables**: En frameworks modernos, 
+la carpeta `views` puede contener componentes reutilizables 
+que facilitan la creación de interfaces dinámicas y consistentes.
+
+5. **Estilos y Scripts Asociados**: A veces, la carpeta de 
+vistas también puede incluir archivos relacionados con estilos 
+CSS o scripts JavaScript específicos que afectan a la 
+presentación de las vistas.
+
+En resumen, la carpeta `views` es fundamental para el desarrollo
+ de la parte visual de las aplicaciones, organizando el código 
+ relacionado con la interfaz de usuario. Si necesitas más información 
+ o ejemplos sobre su uso, ¡pregunta sin problemas!
+
+
+                            .::CORALESoftware::.
