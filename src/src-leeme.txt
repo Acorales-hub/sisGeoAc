@@ -1,0 +1,23 @@
+                            La carpeta `src` 
+                        (abreviatura de "source") 
+
+
+Se utiliza comúnmente en proyectos de desarrollo de software para 
+almacenar el código fuente del proyecto. Aquí hay algunos puntos clave sobre su uso:
+
+1. **Organización del Código**: Facilita la organización del código fuente, separándolo
+ del resto de los archivos del proyecto, como configuración, documentación y recursos.
+
+2. **Estructura del Proyecto**: Ayuda a mantener una estructura clara dentro del proyecto,
+ haciendo que sea más fácil navegar y entender cómo está organizado.
+
+3. **Convenciones**: Es una convención en muchos lenguajes de programación y frameworks,
+ como Java, Python, y React, lo que hace que otros desarrolladores reconozcan rápidamente 
+ dónde buscar el código fuente.
+
+4. **Módulos y Componentes**: A menudo, dentro de la carpeta `src`, se organiza el código
+ en módulos o componentes, creando una estructura lógica que refleja la funcionalidad del 
+ programa.
+
+
+                                                     .::CORALESoftware::.

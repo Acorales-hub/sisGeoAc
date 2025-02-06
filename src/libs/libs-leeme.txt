@@ -1,0 +1,31 @@
+                    La carpeta `libs` 
+                (abreviatura de "libraries")
+
+Se utiliza generalmente en proyectos de software para almacenar bibliotecas 
+externas y dependencias que el proyecto necesita para funcionar. 
+Aquí hay algunas funciones y características clave de esta carpeta:
+
+1. **Almacenamiento de Bibliotecas**: Contiene archivos de bibliotecas de 
+terceros (como `.jar`, `.dll`, o archivos `.so`) que se utilizan en el 
+proyecto. Esto puede incluir frameworks o utilidades que extienden la 
+funcionalidad de la aplicación.
+
+2. **Organización de Dependencias**: Facilita la gestión y organización
+ de las dependencias del proyecto, haciendo que sea más claro qué
+  bibliotecas están en uso.
+
+3. **Aislamiento**: Almacenar librerías en una carpeta separada ayuda a
+ aislar el código del proyecto del código de las bibliotecas externas, 
+ lo que puede ayudar a evitar conflictos.
+
+4. **Facilita la Portabilidad**: Al tener todas las bibliotecas en un
+ solo lugar, facilita la portabilidad del proyecto entre diferentes 
+ entornos y sistemas, ya que todos los componentes necesarios están juntos.
+
+5. **Documentación**: También puede ser un buen lugar para incluir 
+documentación sobre las bibliotecas utilizadas y cómo se integran en el proyecto.
+
+Si tienes más preguntas o necesitas información adicional sobre cómo 
+gestionar la carpeta `libs`, ¡pregunta sin dudarlo!
+
+                                                     .::CORALESoftware::.
