@@ -1,0 +1,30 @@
+                  La carpeta `model` 
+
+Se utiliza en la arquitectura de software, especialmente en 
+el patrón Modelo-Vista-Controlador (MVC) y en aplicaciones 
+que siguen principios como la separación de preocupaciones. 
+Aquí están sus funciones principales:
+
+1. **Representación de Datos**: Contiene las definiciones 
+de las clases o estructuras que representan los datos 
+principales de la aplicación. Esto incluye la lógica 
+relacionada con los datos, como la definición de atributos y métodos.
+
+2. **Interacción con la Base de Datos**: A menudo, los modelos 
+se utilizan para interactuar con la base de datos, permitiendo 
+la creación, lectura, actualización y eliminación (CRUD) de datos. 
+Suelen incluir funciones para manejar consultas y almacenamiento.
+
+3. **Reglas de Negocio**: La carpeta `model` puede contener
+ lógica de negocio que opera sobre los datos, ayudando a definir
+  cómo se deben manipular, validar o guardar esos datos.
+
+4. **Desacoplamiento**: Al tener los modelos separados de otros 
+componentes de la aplicación (como la vista y el controlador),
+ se facilita la mantenibilidad y escalabilidad del código.
+
+5. **Estructura**: Facilita una estructura organizada dentro del 
+proyecto,donde los desarrolladores pueden encontrar rápidamente 
+la lógica relacionada con los datos.
+
+                                       .::CORALESoftware::.
