@@ -7,11 +7,40 @@
 *    DESCRIPCIÓN: ESTILOS EN CASCADA PARA EL INDEX DE LA APP WEB*
 *************************************************************** */
 
+/* Paleta de Colores */  
+:root {  
+    --color-verde: #4B9B31; /* Verde militar */  
+    --color-marron: #8B5B29; /* Marrón terroso */  
+    --color-gris: #7D7D7D; /* Gris neutro */  
+    --color-fondo: #E6E6E6; /* Fondo claro para el contraste */ 
+    --color-negro: #000000; /*Negro para contraste*/
+}  
+
+
+
 body{
-    background-color: #385380;
-    color: aliceblue;
+    font-family: 'Arial Black', Arial, sans-serif; /* Tipografía robusta */  
+    background-image: url('img/fondo_verde_militar_01.jpg');
+    background-color: var(--color-fondo);  
+    color: var(--color-gris);  
+    margin: 0;  
+    padding: 0;  
 }
 
+/* Estilo de encabezados */  
+h1, h2, h3 {  
+    color: var(--color-verde);  
+    margin: 10px 0;  
+}  
+
+button{
+    background-color: var(--color-marron);  
+    color: white;  
+    border: none;  
+    border-radius: 8px; /* Esquinas redondeadas */  
+    padding: 10px 20px;  
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */  
+}
 
 .index-header{
     margin-top: 2em;
@@ -23,8 +52,13 @@ body{
     text-decoration: none;
 }
 
-.index-header a:hover{
-    color:grey;
+
+h1{ 
+        text-shadow:   
+            -2px -2px 0 #000,  
+            2px -2px 0 #000,  
+            -2px  2px 0 #000,  
+            2px  2px 0 #000;  
 }
 
 .index-header a:visited{
@@ -32,23 +66,31 @@ body{
 }
 
 .index-main{
-    background-color: aliceblue;
     padding: 1rem;
     margin-top: 6em;
 }
 
-.index-main form{
-    padding: 1em;
-    background-color: #385380;
+.index-main form {  
+    padding: 2em;  
+    background: rgba(228, 232, 238, 0.5); /* Cambiado a rgba para incluir transparencia */  
     width: 40em;
+    border-radius: 5px; 
+}
+
+.index-main label{
+    color:#8B5B29
 }
 
 .index-footer{
-    margin-top: 14%;
-    background-color: #294662;
-    padding: 5px;
+    margin-top: 7%;
+    background-color: var(--color-marron);
+    padding: 2px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.index-footer div{
+    color: var(--color-negro);
 }
 
 .index-footer p{
