@@ -1,0 +1,130 @@
+Lista de algunos de los comandos más utilizados en Git, 
+que incluye tanto comandos básicos como avanzados:
+
+1. git init
+•	Descripción: Inicializa un nuevo repositorio Git en el directorio actual.
+•	Ejemplo de uso bash: git init  
+
+2. git clone
+•	Descripción: Crea una copia local de un repositorio remoto.
+•	Ejemplo de uso bash:git clone https://github.com/usuario/repositorio.git  
+
+3. git add
+•	Descripción: Añade archivos al área de preparación (staging area) para su confirmación.
+•	Ejemplo de uso bash: git add archivo.txt  
+
+4. git commit
+•	Descripción: Guarda los cambios en el repositorio con un mensaje descriptivo.
+•	Ejemplo de uso bash:git commit -m "Mensaje de commit"  
+
+5. git status
+•	Descripción: Muestra el estado del árbol de trabajo y del área de preparación.
+•	Ejemplo de uso bash: git status  
+
+6. git push
+•	Descripción: Envía las confirmaciones locales a un repositorio remoto.
+•	Ejemplo de uso bash: git push origin main 
+
+7. git pull
+•	Descripción: Obtiene y fusiona cambios de un repositorio remoto a la rama local actual.
+•	Ejemplo de uso bash: git pull origin main  
+
+8. git branch
+•	Descripción: Lista, crea o elimina ramas en el repositorio.
+•	Ejemplo de uso bash: git branch nueva-rama  
+
+9. git checkout
+•	Descripción: Cambia a una rama específica o restaura archivos.
+•	Ejemplo de uso bash :git checkout nueva-rama  
+
+10. git merge
+•	Descripción: Combina los cambios de diferentes ramas en la rama actual.
+•	Ejemplo de uso bash: git merge otra-rama  
+
+11. git log
+•	Descripción: Muestra el historial de commits del repositorio.
+•	Ejemplo de uso bash: git log  
+
+12. git revert
+•	Descripción: Crea un nuevo commit que deshace los cambios de un commit anterior.
+•	Ejemplo de uso bash: git revert <commit-hash>  
+
+13. git stash
+•	Descripción: Guarda temporalmente los cambios no confirmados y vuelve a un estado limpio.
+•	Ejemplo de uso bash: git stash  
+
+14. git reset
+•	Descripción: Restablece el índice y el árbol de trabajo a un estado anterior.
+•	Ejemplo de uso bash: git reset --soft HEAD~1  
+
+15. git rebase
+•	Descripción: Combina cambios de una rama en otra de manera más lineal que un merge.
+•	Ejemplo de uso bash: git rebase otra-rama  
+
+Esta lista incluye una variedad de comandos clave que son útiles tanto para 
+principiantes como para usuarios avanzados en Git. 
+
+
+
+Aquí tienes un ejemplo detallado que ilustra cómo solucionar problemas 
+comunes relacionados con las ramas en Git, incluyendo la resolución de 
+conflictos de fusión y la eliminación de una rama no deseada.
+
+Ejemplo 1: Resolución de Conflictos de Fusión
+Descripción del problema:
+Imagina que tienes dos ramas, main y feature, y haces cambios en el 
+mismo archivo desde ambas ramas. Cuando intentas fusionar feature en main, 
+se produce un conflicto de fusión.
+
+Comandos utilizados:
+•	git checkout
+•	git merge
+•	git status
+•	git add
+•	git commit
+
+Pasos a seguir:
+1.	Cambia a la rama principal, bash: git checkout main  
+	Explicación: Cambiamos a la rama main para integrarle los cambios desde feature.
+
+2.	Fusiona la rama feature, bash:git merge feature  
+	Explicación: Intenta fusionar los cambios de feature en main. Si hay cambios conflictivos, Git te indicará que hay conflictos de fusión.
+
+3.	Verifica el estado, bash: git status  
+	Explicación: Te mostrará los archivos que están en conflicto.
+
+4.	Resuelve los conflictos:
+	Abre el archivo en conflicto y edítalo para resolver los conflictos
+     manualmente (los conflictos estarán delimitados por <<<<<<<, ======= y >>>>>>>).
+
+5.	Marca el conflicto como resuelto, bash:git add archivo-conflicto.txt  
+	Explicación: Indicas que el conflicto ha sido resuelto al añadir nuevamente 
+    el archivo al área de preparación.
+
+6.	Confirma la fusión, bash:git commit -m "Resuelto conflicto al fusionar feature en main"  
+	Explicación: Confirmas los cambios y finalizas la fusión.
+________________________________________
+Ejemplo 2: Eliminación de una Rama No Deseada
+Descripción del problema: Después de terminar el trabajo en una rama feature, 
+te das cuenta de que no necesitas más esa rama y deseas eliminarla.
+Comandos utilizados:
+
+•	git branch
+•	git branch -d
+•	git branch -D (si hay cambios no fusionados)
+
+Pasos a seguir:
+1.	Lista las ramas, bash:git branch  
+	Explicación: Muestras todas las ramas locales para confirmar el nombre de la rama 
+    que deseas eliminar.
+
+2.	Cambia de rama (si estás en feature), bash: git checkout main  
+	Explicación: No se puede eliminar una rama en la que te encuentras actualmente, así que 
+    cambias a otra rama, como main.
+
+3.	Elimina la rama, bash: git branch -d feature  
+	Explicación: Este comando elimina la rama feature, pero solo si ya ha sido fusionada en main.
+
+4.	Si necesitas forzar la eliminación (rama no fusionada), bash: git branch -D feature  
+	Explicación: Si la rama tiene cambios no fusionados y deseas eliminarla de todos modos, 
+    utilizas el flag -D para forzar la eliminación.
