@@ -93,6 +93,7 @@ build/
 
 # Ignorar archivos de logs  
 *.log  
+
 Explicación:
 
 .DS_Store y Thumbs.db son archivos de sistema creados por macOS y Windows, respectivamente.
@@ -102,16 +103,18 @@ node_modules/ y vendor/ son directorios comunes donde se almacenan las dependenc
 .env se usa para almacenar variables de entorno y puede contener información sensible.
 dist/ y build/ son carpetas donde suelen hospedarse las versiones optimizadas de un proyecto.
 *.log se refiere a archivos de registro que no son necesarios en el repositorio.
+
 2. Instrucciones para Agregar el Archivo .gitignore a un Repositorio Existente
 Aquí tienes una guía paso a paso para agregar un archivo .gitignore a un repositorio existente:
 
-Crear el archivo .gitignore: Usa tu editor de texto favorito para crear un nuevo 
+-Crear el archivo .gitignore: 
+Usa tu editor de texto favorito para crear un nuevo 
 archivo llamado .gitignore en la raíz de tu proyecto.
 
-Agregar contenido: Llena el archivo con las reglas y patrones según las necesidades 
+-Agregar contenido: Llena el archivo con las reglas y patrones según las necesidades 
 de tu proyecto (como el ejemplo anterior).
 
-Guardar y cerrar el archivo.
+-Guardar y cerrar el archivo.
 
 Agregar el archivo al repositorio: Abre tu terminal y navega hasta el directorio 
 de tu proyecto. Luego, ejecuta los siguientes comandos:
@@ -119,33 +122,40 @@ de tu proyecto. Luego, ejecuta los siguientes comandos:
 bash
 git add .gitignore  
 git commit -m "Agregar archivo .gitignore"  
+
 Sincronizar con el repositorio remoto: Si tienes un repositorio remoto, puedes 
 empujar los cambios:
 
 bash
 git push origin <nombre-de-tu-rama>  
+
 3. Cómo Revertir la Acción de Ignorar Archivos que Ya Han Sido Añadidos al Repositorio
-Si has añadido un archivo al repositorio pero luego decides ignorarlo, debes seguir estos pasos:
+
+Si has añadido un archivo al repositorio pero luego decides ignorarlo, debes 
+seguir estos pasos:
 
 Eliminar el archivo del índice de Git: Primero, necesitas eliminar el archivo que 
 deseas dejar de ignorar del índice pero sin borrarlo del sistema de archivos. Usarás 
 la opción --cached para esto.
 
 bash
-git rm --cached nombre-del-archivo  
+git rm --cached nombre-del-archivo 
+
 Confirmar el cambio: Esto prepara el archivo para ser rastreado nuevamente, así que 
 realiza un commit para registrar esta acción:
 
 bash
 git commit -m "Dejar de ignorar archivo nombre-del-archivo"  
+
 Verificar el efecto del .gitignore: Asegúrate de que el archivo que has 
 agregado al índice no esté ignorado después de estos cambios.
 
 Sincronizar con el repositorio remoto (si aplica):
 
 bash
-git push origin <nombre-de-tu-rama>  
-Consideraciones Importantes
+git push origin <nombre-de-tu-rama> 
+
+Consideraciones Importantes:
 El archivo .gitignore solo afecta a archivos que no han sido rastreados, por lo que 
 si un archivo ya estaba en el repositorio antes de que se agregara la regla al .gitignore, 
 necesitarás usar git rm --cached para dejar de rastrearlo.
