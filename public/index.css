@@ -14,12 +14,13 @@
     --color-gris: #7D7D7D; /* Gris neutro */  
     --color-fondo: #E6E6E6; /* Fondo claro para el contraste */ 
     --color-negro: #000000; /*Negro para contraste*/
+    --color-dark: #212529; /*Negro dark de bootsatrap*/
 }  
 
 
 
 body{
-    font-family: 'Arial Black', Arial, sans-serif; /* Tipografía robusta */  
+    font-family: Arial, sans-serif; 
     background-image: url('img/fondo_verde_militar_01.jpg');
     background-color: var(--color-fondo);  
     color: var(--color-gris);  
@@ -83,14 +84,14 @@ h1{
 
 .index-footer{
     margin-top: 7%;
-    background-color: var(--color-marron);
+    background-color: var(--color-dark);
     padding: 2px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .index-footer div{
-    color: var(--color-negro);
+    color: var(--color-fondo);
 }
 
 .index-footer p{

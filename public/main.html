@@ -1,204 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Adaptation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="main.css"> 
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menú Desplegable con Modales y Datos</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <!-- Estilos personalizados -->
-        <link rel="stylesheet" href="main.css">
-    </head>
+<body class="container-fluid">
 
-    <body>
 
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Barra lateral -->
-                <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar">
-                    <div class="position-sticky">
-                        <a class="nav-link" href="#" id="toggleSidebarBtn">
-                            <h5 class="text-center">
-                                <i class="bi bi-arrow-left-square-fill">
-                                </i><span>Contraer menú</span>
-                            </h5>
+    <header class="row">
+        <div class="col-md-12">  
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Messages</a>
+                </li>
+                <li class="nav-item dropdown ms-md-auto"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink"> <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header><br>
+
+    <main class="row">
+        <div class="col-md-4">
+            <div id="card-775407">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-bs-toggle="collapse" href="#card-element-577041" aria-expanded="true" aria-controls="card-element-577041">
+                            Collapsible Group Item #1
                         </a>
-                        
-                        <hr>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="visualizador.html" target="_self">
-                                    <i class="bi bi-map"></i> Map View Prototype
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Submenú 1</span>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modalDispositivo1">Dispositivo 1</a></li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modalDispositivo2">Dispositivo 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Submenú 2</span>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modalPersona1"><i class="bi bi-camera"></i> Persona 1</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                            data-bs-target="#modalPersona2"><i class="bi bi-image"></i> Persona 2</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </div>
-                </nav>
-
-                <!-- Contenido principal -->
-                <main id="content" class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-center">
-                    <h2>Contenido Principal</h2>
-                    <p>Aquí se mostrará la información principal del sitio web.</p>
-
-                    <!-- Enlaces para mostrar información y mapas -->
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">Mostrar Información</a>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#infoModal" onclick="initMap()">Mostrar Mapa</a>
-                </main>
-            </div>
-        </div>
-
-        <!-- Modales para los dispositivos -->
-        <div class="modal fade" id="modalDispositivo1" tabindex="-1" aria-labelledby="modalDispositivo1Label"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="modalDispositivo1Label">Datos Dispositivo 1</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Datos GPS:</h6>
-                        <p>Latitud: 34.0522 <br> Longitud: -118.2437</p>
-                        <hr>
-                        <h6>Información Adicional:</h6>
-                        <p>Información detallada del dispositivo 1.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalDispositivo2" tabindex="-1" aria-labelledby="modalDispositivo2Label"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="modalDispositivo2Label">
-                            Datos Dispositivo 2
-                            <i class="bi bi-webcam"></i>
-                            <i class="bi bi-image"></i>
-                        </h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Datos GPS:</h6>
-                        <p>Latitud: 40.7128 <br> Longitud: -74.0060</p>
-                        <hr>
-                        <h6>Información Adicional:</h6>
-                        <p>Información detallada del dispositivo 2.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modales para las personas -->
-        <div class="modal fade" id="modalPersona1" tabindex="-1" aria-labelledby="modalPersona1Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="modalPersona1Label">Datos Persona 1 <i class="bi bi-camera"></i> <i
-                                class="bi bi-image"></i></h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="img/silueta_foto_carnet.jpg" width="190" height="190" alt="Foto de Persona 1" class="img-thumbnail">
+                    <div id="card-element-577041" class="collapse show">
+                        <div class="card-body">
+                            Anim pariatur cliche...
                         </div>
-                        <hr>
-                        <h6>Información Personal:</h6>
-                        <p>Nombre: Juan Pérez <br> Edad: 30 años</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="modalPersona2" tabindex="-1" aria-labelledby="modalPersona2Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="modalPersona2Label">Datos Persona 2 <i class="bi bi-camera"></i> <i
-                                class="bi bi-image"></i></h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-bs-toggle="collapse" href="#card-element-756215" aria-expanded="false" aria-controls="card-element-756215">
+                            Collapsible Group Item #2
+                        </a>
                     </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <img src="img/silueta_foto_carnet.jpg" width="190" height="190" alt="Foto de Persona 2" class="img-thumbnail">
+                    <div id="card-element-756215" class="collapse">
+                        <div class="card-body">
+                            Anim pariatur cliche...
                         </div>
-                        <hr>
-                        <h6>Información Personal:</h6>
-                        <p>Nombre: María García <br> Edad: 25 años</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Modal para la información -->
-        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="infoModalLabel">Información Adicional</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí se muestra información adicional relevante.
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-8">
+            <img alt="Bootstrap Image Preview" src="img/atmce.png" class="img-fluid"/> 
         </div>
+    </main><br>
 
-        <!-- Modal para el mapa -->
-        <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white">  
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="mapModalLabel">Mapa</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí se mostraría un mapa (ej. Google Maps).
+    <footer class="row">
+        <div class="col-md-12"> <div class="row">
+                <div class="col-md-4">
+                    <ol>
+                        <li class="list-item">
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        </ol>
+                </div>
+                <div class="col-md-4">
+                    <h2>Heading</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                    <p><a class="btn btn-primary" href="#">View details »</a></p>  </div>
+                <div class="col-md-4">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">Home <span class="badge bg-light text-dark rounded-pill">14</span></a>  <div class="list-group-item">List header</div>
+                        <div class="list-group-item">
+                            <h4 class="list-group-item-heading">List group item heading</h4>
+                            <p class="list-group-item-text">...</p>
                         </div>
+                        <a href="#" class="list-group-item list-group-item-action justify-content-between">Help <span class="badge bg-secondary rounded-pill">14</span></a> </div>
                 </div>
             </div>
         </div>
+    </footer>
 
-
-        <!-- Bootstrap JS y Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- jQuery para la funcionalidad de arrastrar los modales -->
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        <script src="main.js"></script>
-
-
-        <!-- Js Map -->
-        <script src="javascript/map.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
