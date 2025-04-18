@@ -1,0 +1,95 @@
+:root {  
+    --color-verde: #4B9B31; /* Verde militar */  
+    --color-marron: #8B5B29; /* Marrón terroso */  
+    --color-gris: #7D7D7D; /* Gris neutro */  
+    --color-fondo: #E6E6E6; /* Fondo claro para el contraste */ 
+    --color-negro: #000000; /*Negro para contraste*/
+    --imagen-fondo: url('../img/fondo_verde_militar_01.jpg');
+    --tipo-de-letra: Arial, sans-serif;
+    --borde-radio : 5px;
+}  
+
+body {
+    font-family: var(--tipo-de-letra); 
+    background-image: var(--imagen-fondo);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    color: var(--color-fondo);
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*ESTILOS PARA EL MAPA*/
+
+    #map{
+        width: 98.9%;
+        height: 580px;
+        min-height: 400px;
+        margin: 4px;
+        border-radius: var(--borde-radio)
+    }
+
+    .contenedor-map{
+        border-radius: var(--borde-radio);
+        padding: 1px;
+    }
+
+
+/*ESTILOS PARA EL MENÚ DESPLEGABLE DE NAV*/
+
+    #sidebar {
+        width: 250px;
+        height: 100vh;
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+        transition: all 0.3s;
+    }
+
+    #sidebar.collapsed {
+        width: 60px;
+    }
+
+    #sidebar.collapsed .nav-link span {
+        display: none;
+    }
+
+    /* Oculta los submenús cuando la barra lateral está colapsada */
+    #sidebar.collapsed .dropdown-toggle::after {
+        display: none; /* Oculta la flecha del dropdown */
+    }
+
+    #sidebar.collapsed .dropdown-menu {
+        display: none;
+    }
+
+    #content {
+        margin-left: 250px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+    }
+
+    #content.collapsed {
+        margin-left: 60px;
+    }
+
+    .modal-header {
+        cursor: move;
+    }
+
+    .formato-lista{
+        list-style: none;
+    }
+    

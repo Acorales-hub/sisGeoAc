@@ -1,0 +1,22 @@
+.fondo{
+    background-color: #18661a;
+}
+
+.imagen2{
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.titulo-gps-data{
+    color:#fffefc;
+    text-align: center;
+    text-shadow: 2px 3px 1px black;
+}
+
+.show-gps-data{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 2px;
+    padding-top: 10px;
+}

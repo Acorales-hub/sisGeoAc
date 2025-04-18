@@ -1,0 +1,74 @@
+/* *************************************************************
+*  ACADEMIA TÉCNICA MILITAR BOLIVARIANA                        *
+*  DE COMUNICACIONES Y ELÉCTRONICA.                            *
+*  PROYECTO DE PROGRAMACIÓN.                                   *
+*  ALFÉREZ: D. NAVARRO C.                                      *
+*  FECHA: 22/04/2022                                           *
+*  DESCRIPCIÓN: ESTILOS EN CASCADA PARA EL INDEX DE LA APP WEB *
+***************************************************************/
+
+.style-body{
+    background-image: url(../img/fondo_verde_militar_01.jpg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+}
+
+
+.center-form-index{
+    margin: 1em;
+    background-color: rgb(179, 37, 37);
+    padding: 3em;
+    border-radius: 5px;
+    box-shadow: 3px 7px 5px 5px;
+}
+
+.titulo-index{
+    color: blanchedalmond;
+    text-shadow: 3px 5px 5px black;
+    text-align: center;
+}
+
+.index-footer{
+    min-height: 39.1vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+}
+
+#id-footer{
+  background-color: #6B5B24;
+}
+
+@media(max-width: 468px){
+    
+    .style-body{
+        background-image: url(../img/fondo_verde_militar_01.jpg);
+        display: flex;
+        flex-direction: column;
+        flex-wrap:nowrap;
+        justify-content:start;
+        align-items:start;
+        width: 100%;
+    }
+    
+
+    .center-form-index {
+        width: 100%;
+        padding: 1em; /* Reducido el padding */
+        margin: 0px;
+        border-radius: 0px; /*Eliminado border radius para mejor experiencia de usuario*/
+        box-shadow: none; /* Eliminada la sombra */
+        max-width: none; /* Quita el limite de tamaño en pantallas pequeñas */
+    }
+
+    .img-index{
+        display: none;
+    }
+    }
+
+@media(min-width: 850px){
+    .index-footer{
+        min-height: 50vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    }
+}
