@@ -1,15 +1,17 @@
 'use strict'
 
-/* **************************************************************
-*    ACADEMIA TÉCNICA MILITAR BOLIVARIANA                       *
-*    DE COMUNICACIONES Y ELÉCTRONICA.                           *
-*    PROYECTO DE PROGRAMACIÓN.                                  *
-*    ALFÉREZ: D. NAVARRO C.                                     *
-*    FECHA: 31/03/2025                                          *
-*    DESCRIPCIÓN: MODULO DE CAPTURA DE DATOS Y GPS              *
-*************************************************************** */
+/* 
+TODO: ===========================================================
+TODO:   ACADEMIA TÉCNICA MILITAR BOLIVARIANA                     
+TODO:    DE COMUNICACIONES Y ELÉCTRONICA.                        
+TODO:    PROYECTO DE PROGRAMACIÓN.                               
+TODO:    ALFÉREZ: D. NAVARRO C.                                 
+TODO:   FECHA: 31/03/2025                                       
+TODO:    DESCRIPCIÓN: MODULO DE CAPTURA DE DATOS Y GPS           
+TODO: ===========================================================
+*/
 
-   // VARIABLES:
+   //! VARIABLES:
         let tiempo = new Date();
         let hora = tiempo.getHours();
         let minutos = tiempo.getMinutes();
@@ -19,7 +21,7 @@
         let year = tiempo.getFullYear();
         let fullFecha = fecha + '/' + mes + '/' + year;
 
-    //Funciones:
+  //! Funciones:
 
 // getDataGps.js
 // Función para obtener la ubicación actual del usuario utilizando la API de Geolocalización de HTML5
@@ -40,7 +42,7 @@
     const longitude = position.coords.longitude;
     const accuracy = position.coords.accuracy;
 
-    // Mostrar en los elementos HTML
+    //! Mostrar en los elementos HTML
 
     document.getElementById("latitud").textContent = latitude.toFixed(6); // Mostrar 6 decimales
     document.getElementById("longitud").textContent = longitude.toFixed(6); // Mostrar 6 decimales
@@ -50,11 +52,9 @@
     // Opcional: Mostrar un mensaje de éxito
     displayWarning("Ubicación obtenida con éxito.");
 
-    // Aquí puedes agregar código para enviar la ubicación a un servidor, si es necesario.
+    //! Aquí puedes agregar código para enviar la ubicación a un servidor, si es necesario.
     console.log("Latitud: " + latitude + ", Longitud: " + longitude);
   }
-
-  
 
   function showError(error) {
 
@@ -95,18 +95,18 @@
     }
   }
 
-  // Llamar a la función para obtener la ubicación cuando la página se carga
-  //window.onload = getCurrentLocation;
+  //! Llamar a la función para obtener la ubicación cuando la página se carga
+  //! window.onload = getCurrentLocation;
 
 
-  // Función para obtener información del dispositivo
+  //* Función para obtener información del dispositivo
 function getDeviceInfo() {
     const userAgent = navigator.userAgent;
     let deviceType = "Desconocido";
     let os = "Desconocido";
     let browser = "Desconocido";
 
-    // Detectar tipo de dispositivo
+    //* Detectar tipo de dispositivo
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
           deviceType = "Móvil";
       } else if (/Tablet|iPad/i.test(userAgent)) {
@@ -115,7 +115,7 @@ function getDeviceInfo() {
           deviceType = "Escritorio";
       }
 
-    // Detectar sistema operativo
+    //* Detectar sistema operativo
       if (/Android/i.test(userAgent)) {
           os = "Android";
       } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
@@ -130,7 +130,7 @@ function getDeviceInfo() {
 
 
 
-    // Detectar navegador
+    //* Detectar navegador
 
     if (/Chrome/i.test(userAgent)) {
         browser = "Chrome";
@@ -145,38 +145,38 @@ function getDeviceInfo() {
     }
 
 
-    // Mostrar la información en la consola
+    //* Mostrar la información en la consola
       console.log("Tipo de dispositivo:", deviceType);
       console.log("Sistema operativo:", os);
       console.log("Navegador:", browser);
 
 
-    // Mostrar la información en el HTML (si tienes elementos para esto)
+    //* Mostrar la información en el HTML (si tienes elementos para esto)
     document.getElementById("deviceType").textContent = deviceType;
     document.getElementById("os").textContent = os;
     document.getElementById("browser").textContent = browser;
 
 }
 
-// Función para actualizar el mapa (integrando api-map.js)<----LA ACTUALIZACIÓN DEL MAPA NO VA EN ESTE ARCHIVO
+//* Función para actualizar el mapa (integrando api-map.js)<----LA ACTUALIZACIÓN DEL MAPA NO VA EN ESTE ARCHIVO
 
 function actualizarMapa(lat, lon) {
 
-    // Actualizar las variables globales de api-map.js
+    //* Actualizar las variables globales de api-map.js
       latitud = lat;
       longitud = lon;
 
-    // Llamar a la función OpenStreetMap para actualizar el mapa
+    //* Llamar a la función OpenStreetMap para actualizar el mapa
       OpenStreetMap();
 
 }
 
 
-// Llamar a la función para obtener la ubicación y la información del dispositivo cuando la página se carga
-//window.onload = getDataGps;
-//getDataGps();
+//* Llamar a la función para obtener la ubicación y la información del dispositivo cuando la página se carga
+//*window.onload = getDataGps;
+//*getDataGps();
 
-function getDataGps(){//Detección de datos y gps
+function getDataGps(){//*Detección de datos y gps
     document.getElementById('fecha').innerText = fullFecha;
     document.getElementById('hora').innerText = hora + ':' + minutos + ':' + segundos;
     getCurrentLocation()
